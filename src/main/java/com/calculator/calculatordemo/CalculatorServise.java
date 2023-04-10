@@ -4,7 +4,7 @@ package com.calculator.calculatordemo;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 @Service
-public class CalculatorServise {
+public class CalculatorServise implements CalculatorInterface {
     public String hello() {
         return "Добро пожаловать в калькулятор";
     }
