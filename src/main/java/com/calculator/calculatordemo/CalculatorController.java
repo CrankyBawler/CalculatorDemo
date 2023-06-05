@@ -47,16 +47,8 @@ public class CalculatorController {
 
     @GetMapping(path = "/divide")
     public String divide(int num1, int num2) {
-        if (num2 == 0) {
-            return " На 0 делить нельзя ";
-        } else {
-            if (num1 != 0 && num2 != 0) {
-                int divide = num1 / num2;
-                return num1 + "/" + num2 + "=" + calculatorService.divide(num1, num2);
-            } else {
-                return "Ошибка! введите оба числа";
-
+        return num1 + "/" + num2 + "=" + calculatorService.divide(num1, num2);
             }
         }
-    }
-}
+
+

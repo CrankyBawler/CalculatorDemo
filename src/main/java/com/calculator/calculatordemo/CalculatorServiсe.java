@@ -11,25 +11,30 @@ public class CalculatorServiсe implements CalculatorInterface {
 
     public int sum(int num1, int num2) {
         int sum = num1 + num2;
-            return sum;
-        }
-
+        return sum;
+    }
 
 
     public int minus(int num1, int num2) {
-         int minus = num1 - num2;
-            return minus;
-        }
+        int minus = num1 - num2;
+        return minus;
+    }
 
     public int multiply(int num1, int num2) {
         int multiply = num1 * num2;
         return multiply;
-        }
+    }
 
     public int divide(int num1, int num2) {
-                        int divide = num1 / num2;
-                return divide;
-            }
+        if (num2 == 0) {
+            throw new IllegalArgumentException();
+        } else {
+            int divide = num1 / num2;
+            return divide;
+        }
+    }
 }
+
+
 
 
